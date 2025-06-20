@@ -1,0 +1,141 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CosmosNotes</title>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: url('assets/backgrounds/galaxy.jpg') no-repeat center center fixed;
+      background-size: cover;
+      color: #fff;
+      overflow-x: hidden;
+    }
+    .intro {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: rgba(0, 0, 0, 0.95);
+      color: #00ccff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2rem;
+      z-index: 9999;
+      animation: fadeOut 3s ease-in-out forwards;
+    }
+    @keyframes fadeOut {
+      0% { opacity: 1; }
+      90% { opacity: 1; }
+      100% { opacity: 0; visibility: hidden; }
+    }
+    nav {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      background: rgba(0, 0, 0, 0.6);
+      padding: 1rem;
+    }
+    nav a {
+      position: relative;
+      color: #00ccff;
+      font-size: 1.2rem;
+      text-decoration: none;
+      transition: 0.3s;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    nav a::after {
+      content: '';
+      position: absolute;
+      width: 100%;
+      transform: scaleX(0);
+      height: 2px;
+      bottom: -5px;
+      left: 0;
+      background-color: #00ccff;
+      transform-origin: bottom right;
+      transition: transform 0.25s ease-out;
+    }
+    nav a:hover::after {
+      transform: scaleX(1);
+      transform-origin: bottom left;
+    }
+    nav a:hover {
+      color: #ffffff;
+      text-shadow: 0 0 10px #00ccff, 0 0 20px #00ccff;
+    }
+    .profile {
+      text-align: center;
+      margin: 2rem;
+    }
+    .profile img {
+      width: 160px;
+      height: 160px;
+      border-radius: 50%;
+      box-shadow: 0 0 25px #00ccff;
+    }
+    .profile h2 {
+      margin-top: 1rem;
+      font-size: 1.8rem;
+    }
+  </style>
+</head>
+<body>
+  <div class="intro">🌌 Welcome to CosmosNotes...</div>
+
+  <audio autoplay loop muted id="bg-music">
+    <source src="assets/music/calm-space-music.mp3" type="audio/mpeg">
+  </audio>
+
+  <nav>
+    <a href="index.html"><i data-lucide="home"></i>Home</a>
+    <a href="#blog"><i data-lucide="book-open-text"></i>Blog</a>
+    <a href="#thoughts"><i data-lucide="message-square"></i>Your Thoughts</a>
+    <a href="#music"><i data-lucide="music"></i>Music</a>
+    <a href="#gallery"><i data-lucide="image"></i>Gallery</a>
+    <a href="#contact"><i data-lucide="mail"></i>Contact</a>
+  </nav>
+
+  <section class="profile">
+    <img src="assets/profile/profile_cosmic.jpg" alt="Sonmoni Kalita - Cosmic Profile" />
+    <h2>Sonmoni Kalita</h2>
+    <p>Dreaming through the stars, writing through the cosmos.</p>
+  </section>
+
+  <section id="blog" style="text-align: center; padding: 2rem;">
+    <h1 style="font-size: 2rem;">Blog Section</h1>
+    <p>Coming soon...</p>
+  </section>
+
+  <section id="thoughts" style="text-align: center; padding: 2rem;">
+    <h1 style="font-size: 2rem;">Your Thoughts</h1>
+    <p>Publish and share what’s on your mind.</p>
+  </section>
+
+  <section id="music" style="text-align: center; padding: 2rem;">
+    <h1 style="font-size: 2rem;">Music Gallery</h1>
+    <p>Upload and showcase your cosmic tracks here.</p>
+  </section>
+
+  <section id="gallery" style="text-align: center; padding: 2rem;">
+    <h1 style="font-size: 2rem;">Image Gallery</h1>
+    <p>Future space images and visuals will be displayed here.</p>
+  </section>
+
+  <section id="contact" style="text-align: center; padding: 2rem;">
+    <h1 style="font-size: 2rem;">Contact</h1>
+    <p>Email: kalitasonmoni26@gmail.com</p>
+  </section>
+
+  <script>
+    lucide.createIcons();
+  </script>
+</body>
+</html>
