@@ -1,0 +1,61 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>CosmosNotes</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Orbitron', sans-serif;
+      background: #000 url('images_galaxy-bg.jpg') no-repeat center center fixed;
+      background-size: cover;
+      color: white;
+      overflow-x: hidden;
+    }
+    h1, h2 {
+      text-align: center;
+      color: #0ff;
+      text-shadow: 0 0 10px #00f7ff, 0 0 20px #00f7ff;
+    }
+    nav {
+      text-align: center;
+      padding: 1rem;
+      background-color: rgba(0,0,0,0.6);
+    }
+    nav a {
+      margin: 0 1rem;
+      color: white;
+      text-decoration: none;
+      font-size: 1.1rem;
+    }
+    main {
+      padding: 2rem;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="blog.html">Blog</a>
+    <a href="thoughts.html">Your Thoughts</a>
+    <a href="music.html">Music</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+  <main>
+    <h1>Index</h1>
+    <h2>Welcome to CosmosNotes</h2>
+    <p>This is the homepage with galaxy animation.</p>
+  </main>
+  <script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
+  <script>
+    particlesJS.load('particles-js', 'particles.json', function() {
+      console.log('callback - particles.js config loaded');
+    });
+  </script>
+</body>
+</html>
